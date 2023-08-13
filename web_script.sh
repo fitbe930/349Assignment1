@@ -1,9 +1,10 @@
 #!/bin/bash
 
-apt-get update
-apt-get install -y apache2 php libapache2-mod-php phpmysql
+sudo apt update
+sudo apt install -y apache2 php libapache2-mod-php php-mysql
 
-cp /vargrant/test-website.conf /etc/apache2/sites-available/
+
+cp /vagrant/test-website.conf /etc/apache2/sites-available/
 
 a2ensite test-website
 
