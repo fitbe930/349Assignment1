@@ -23,11 +23,20 @@ $stud_id = $_POST['stud_id'];
 $sql = "INSERT INTO Students (firstname, lastname, course, stud_id) VALUES ('$firstname', '$lastname', '$course', '$stud_id')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo "Sign up Successful";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
+
+
+
 // Close the connection
 $conn->close();
 ?>
+
+<!DOCTYPE html>
+<body>
+    <a href ="index.html">
+        <button>Return</button>
+</body>

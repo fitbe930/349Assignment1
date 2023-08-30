@@ -24,6 +24,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "admin" do |admin|
     admin.vm.hostname = "admin"
+    admin.vm.network "forwarded_port", guest: 80, host: 8081, host_ip: "127.0.0.1" 
     admin.vm.network "private_network", ip: "192.168.2.13"
     admin.vm.provision "shell", path: "admin_script.sh"
   end
