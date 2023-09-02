@@ -1,11 +1,6 @@
 <?php
 session_start();
 
-/*if (!isset($_SESSION["admin_logged_in"]) || $_SESSION["admin_logged_in"] !== true) {
-    header("Location: admin_login.php");
-    exit;
-}*/
-
 require_once "db_connection.php";
 
 // Fetch student records from the database
@@ -30,7 +25,7 @@ $result = $conn->query($sql);
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Course</th>
-                
+               
             </tr>
             <?php
             if ($result->num_rows > 0) {
